@@ -2,38 +2,17 @@ package PatternPrinting;
 
 import java.util.Scanner;
 
-public class HollowPyramid {
+public class ReverseHollowPyramid {
     public static void main(String[] args) {
         Scanner userip = new Scanner(System.in);
 
         System.out.print("Enter the number: ");
         int n = userip.nextInt();
 
-        for (int row = 1; row <= n; row++) {
-
-            // Print spaces before stars
-            for (int col = 1; col <= n - row; col++) {
-                System.out.print(" ");
-            }
-
-            // Print stars and spaces for the pyramid's edges
-            for (int k = 1; k <= 2 * row - 1; k++) {
-                if (k == 1 || k == 2 * row - 1 || row == n) {
-                    System.out.print("*");
-                }
-                else {
-                    System.out.print(" ");
-                }
-            }
-            System.out.println();
-        }
-
-
-
-/*   for (int row = 1; row<=n; row++) {
+        for (int row = 1; row<=n; row++) {
 
             //part1
-                for (int col = 1; col <= n-row; col++) {
+                for (int col = 1; col <= row-1; col++) {
                     System.out.print("  ");
             }
 
@@ -42,7 +21,7 @@ public class HollowPyramid {
                 //part2
             if(row==1 || row==n){
 
-                for (int k = 1; k <=2*row-1 ; k++) {
+                for (int k = 1; k <= (2*n-2*row+1); k++) {
                     System.out.print("* ");
                 }
 
@@ -53,7 +32,7 @@ public class HollowPyramid {
                 System.out.print("* ");
 
                 //for that space between
-                for (int m = 1; m <=2*row-3 ; m++) {
+                for (int m = 1; m <=2*n-2*row-1 ; m++) {
                     System.out.print("  ");
                 }
                 //1*
@@ -62,11 +41,7 @@ public class HollowPyramid {
             }
 
             System.out.println();
-        }*/
-
-
-
-
+        }
 
 
     }
