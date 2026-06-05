@@ -2,9 +2,8 @@ package PatternPrinting;
 
 import java.util.Scanner;
 
-public class RightangledTriangle {
+public class InvertedTriangle {
     public static void main(String[] args) {
-
         Scanner userip= new Scanner(System.in);
 
         System.out.print("Enter The Row Number: ");
@@ -12,18 +11,20 @@ public class RightangledTriangle {
 
 
         //Right angled Triangle ----just change the j<=column ----> j<=i
-            //*
-            //* *
-            //* * *
-            //* * * *
-           // * * * * *
+        //* * * * *
+        //* * * *
+        //* * *
+        //* *
+        // *
 
-    for(int row=1; row<=n;row++){
-        for(int col=1; col<=row; col++){
-            System.out.print("*");
+   //formula== n-row+1
+
+        for(int row=1; row<=n; row++){
+            for(int col=1; col<=n-row+1; col++){
+                System.out.print("*");
+            }
+            System.out.println();
         }
-        System.out.println();
-    }
 
     }
 }

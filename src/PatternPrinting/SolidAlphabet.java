@@ -7,30 +7,36 @@ public class SolidAlphabet {
 
         Scanner userip= new Scanner(System.in);
 
-        System.out.print("Enter The Row Number: ");
-        int row = userip.nextInt();
+        System.out.print("Enter The Number: ");
+        int n = userip.nextInt();
 
-        System.out.print("Enter The Column Number: ");
-        int column = userip.nextInt();
+
 
         // Solid rectangle pattern with alphabets
-        for(int i=0; i<row; i++) {
-            char ch = 'A'; // Starting alphabet
-            for(int j=0; j<column; j++) {
-                System.out.print(ch + " ");
+
+            // Starting alphabet
+
             //if you want to print like this don't use ch++
             // A A A A
             //A A A A
             //A A A A
 
-                ch++; // Move to next alphabet
-                // A B C D
-                //A B C D
-                //A B C D
+          // Move to next alphabet use (ch++;)
+         // A B C D
+         //A B C D
+         //A B C D
+
+//=============================================================
+        // Solid rectangle pattern with alphabets
+
+        for(int row=1; row<=n; row++) {
+            char ch = 'A';  // Starting alphabet
+            for(int col=1; col<=n; col++) {
+                System.out.print(ch + " ");
+                ch++;
             }
             System.out.println();
         }
-
 
     }
 }
