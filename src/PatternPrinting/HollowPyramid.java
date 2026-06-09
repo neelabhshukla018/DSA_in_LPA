@@ -16,16 +16,22 @@ public class HollowPyramid {
                 System.out.print(" ");
             }
 
-            // Print stars and spaces for the pyramid's edges
-            for (int k = 1; k <= 2 * row - 1; k++) {
-                if (k == 1 || k == 2 * row - 1 || row == n) {
+            if (row == 1 || row == n) {
+                for (int k = 1; k <= 2 * row - 1; k++) {
                     System.out.print("*");
                 }
-                else {
+            }
+
+            else{
+                System.out.print("*");
+
+                for (int m = 1; m <=2*row-3 ; m++) {
                     System.out.print(" ");
                 }
+                System.out.print("*");
             }
             System.out.println();
+
         }
 
 

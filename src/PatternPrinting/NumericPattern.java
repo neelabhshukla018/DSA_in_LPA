@@ -11,6 +11,9 @@ public class NumericPattern {
 
         for (int row = 1; row <= n; row++) {
 
+
+
+
             //PART-1================
             for (int col = 1; col <= n - row; col++) {
                 System.out.print(" ");
