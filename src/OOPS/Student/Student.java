@@ -1,4 +1,4 @@
-package OOPS;
+package OOPS.Student;
 
 public class Student {
 
@@ -16,6 +16,7 @@ public class Student {
     //adding one more layer security
     //getter function
     public String getgf(){
+
         return this.gf;
     }
 
@@ -23,9 +24,12 @@ public class Student {
     public void setgf(String nameofgf){
 
         //we can add extra layer of authentication
-        if(age<22)
-           this.gf=nameofgf;
-        return;
+        if (this.age < 22) {
+            this.gf = nameofgf;
+        }
+        else {
+            System.out.println("GF name cannot be changed after age 22.");
+        }
     }
 
 //Behaviiour(Methods)
