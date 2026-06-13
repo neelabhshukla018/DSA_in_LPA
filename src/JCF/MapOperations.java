@@ -2,145 +2,95 @@ package JCF;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
-import java.util.Collection;
 
 public class MapOperations {
     public static void main(String[] args) {
 
-        // ==========================
-        // 1. Creating a HashMap
-        // ==========================
-        HashMap<String, String> m1 = new HashMap<>();
+        // 1. Create a HashMap
+        HashMap<String, String> map = new HashMap<>();
 
-        // ==========================
-        // 2. Adding Elements (put)
-        // ==========================
-        m1.put("IN", "India");
-        m1.put("BR", "Brazil");
-        m1.put("RU", "Russia");
-        m1.put("SP", "Spain");
+        // 2. Add elements (put)
+        map.put("IN", "India");
+        map.put("US", "United States");
+        map.put("JP", "Japan");
+        map.put("BR", "Brazil");
 
-        System.out.println("Original Map: " + m1);
+        System.out.println("Original Map : " + map);
 
-        // ==========================
-        // 3. Accessing Value (get)
-        // ==========================
-        System.out.println("Value for key IN: " + m1.get("IN"));
+        // 3. Get value using key
+        System.out.println("\nget(IN) : " + map.get("IN"));
 
-        // ==========================
-        // 4. Checking Key and Value
-        // ==========================
-        System.out.println("Contains key BR? " + m1.containsKey("BR"));
-        System.out.println("Contains value India? " + m1.containsValue("India"));
+        // 4. Check key and value
+        System.out.println("containsKey(US) : " + map.containsKey("US"));
+        System.out.println("containsValue(Japan) : " + map.containsValue("Japan"));
 
-        // ==========================
-        // 5. Size of Map
-        // ==========================
-        System.out.println("Size of map: " + m1.size());
+        // 5. Size of map
+        System.out.println("size() : " + map.size());
 
-        // ==========================
-        // 6. Updating Value
-        // ==========================
-        m1.put("SP", "South Africa"); // Replaces old value
-        System.out.println("After updating SP: " + m1);
+        // 6. Update value
+        map.put("JP", "Japan Updated");
+        System.out.println("\nAfter updating JP : " + map);
 
-        // ==========================
         // 7. putIfAbsent()
-        // ==========================
-        m1.putIfAbsent("FR", "France");
-        m1.putIfAbsent("IN", "Indonesia"); // Won't replace
-        System.out.println("After putIfAbsent(): " + m1);
+        map.putIfAbsent("FR", "France");
+        map.putIfAbsent("IN", "Indonesia"); // Will not update
+        System.out.println("After putIfAbsent() : " + map);
 
-        // ==========================
-        // 8. Removing Elements
-        // ==========================
-        m1.remove("RU"); // Remove by key
-        System.out.println("After remove(RU): " + m1);
+        // 8. replace()
+        map.replace("BR", "Belgium");
+        System.out.println("After replace() : " + map);
 
-        m1.remove("SP", "South Africa"); // Remove key-value pair
-        System.out.println("After remove(SP, South Africa): " + m1);
+        // 9. getOrDefault()
+        System.out.println("\ngetOrDefault(IN) : "
+                + map.getOrDefault("IN", "Not Found"));
+        System.out.println("getOrDefault(RU) : "
+                + map.getOrDefault("RU", "Not Found"));
 
-        // ==========================
-        // 9. Replace Value
-        // ==========================
-        m1.replace("BR", "Belgium");
-        System.out.println("After replace(BR): " + m1);
+        // 10. Remove element
+        map.remove("US");
+        System.out.println("\nAfter remove(US) : " + map);
 
-        m1.replace("FR", "France", "Finland");
-        System.out.println("After conditional replace: " + m1);
+        // 11. Remove key-value pair
+        map.remove("FR", "France");
+        System.out.println("After remove(FR, France) : " + map);
 
-        // ==========================
-        // 10. Creating Another Map
-        // ==========================
-        HashMap<String, String> m2 = new HashMap<>();
+        // 12. Print all keys
+        System.out.println("\nkeySet() : " + map.keySet());
 
-        m2.put("Arjun", "India");
-        m2.put("Burrato", "Brazil");
-        m2.put("Daniel", "Russia");
-        m2.put("Professor", "Spain");
+        // 13. Print all values
+        System.out.println("values() : " + map.values());
 
-        System.out.println("\nSecond Map: " + m2);
-
-        // ==========================
-        // 11. putAll()
-        // ==========================
-        m2.putAll(m1);
-        System.out.println("After putAll(m1): " + m2);
-
-        // ==========================
-        // 12. keySet()
-        // ==========================
-        Set<String> keys = m2.keySet();
-        System.out.println("Keys: " + keys);
-
-        // ==========================
-        // 13. values()
-        // ==========================
-        Collection<String> values = m2.values();
-        System.out.println("Values: " + values);
-
-        // ==========================
-        // 14. entrySet()
-        // ==========================
-        System.out.println("Key-Value Pairs:");
-        for (Map.Entry<String, String> entry : m2.entrySet()) {
+        // 14. Traverse using entrySet()
+        System.out.println("\nUsing entrySet():");
+        for (Map.Entry<String, String> entry : map.entrySet()) {
             System.out.println(entry.getKey() + " --> " + entry.getValue());
         }
 
-        // ==========================
-        // 15. forEach() (Java 8)
-        // ==========================
-        System.out.println("\nUsing forEach:");
-        m2.forEach((key, value) -> System.out.println(key + " = " + value));
+        // 15. Traverse using forEach()
+        System.out.println("\nUsing forEach():");
+        map.forEach((key, value) ->
+                System.out.println(key + " = " + value));
 
-        // ==========================
-        // 16. getOrDefault()
-        // ==========================
-        System.out.println("\nExisting key: " +
-                m2.getOrDefault("IN", "Not Found"));
+        // 16. Create another map
+        HashMap<String, String> map2 = new HashMap<>();
+        map2.put("AR", "Argentina");
+        map2.put("AU", "Australia");
 
-        System.out.println("Non-existing key: " +
-                m2.getOrDefault("US", "Not Found"));
+        // 17. putAll()
+        map2.putAll(map);
+        System.out.println("\nAfter putAll() : " + map2);
 
-        // ==========================
-        // 17. isEmpty()
-        // ==========================
-        System.out.println("\nIs map empty? " + m2.isEmpty());
+        // 18. Clone map
+        HashMap<String, String> copy =
+                (HashMap<String, String>) map2.clone();
+        System.out.println("Cloned Map : " + copy);
 
-        // ==========================
-        // 18. clone()
-        // ==========================
-        HashMap<String, String> m3 =
-                (HashMap<String, String>) m2.clone();
+        // 19. isEmpty()
+        System.out.println("\nisEmpty() : " + map2.isEmpty());
 
-        System.out.println("Cloned Map: " + m3);
-
-        // ==========================
-        // 19. clear()
-        // ==========================
-        m3.clear();
-        System.out.println("After clear(), m3 = " + m3);
-        System.out.println("Is m3 empty? " + m3.isEmpty());
+        // 20. Clear map
+        map2.clear();
+        System.out.println("After clear() : " + map2);
+        System.out.println("isEmpty() after clear : " + map2.isEmpty());
     }
 }
