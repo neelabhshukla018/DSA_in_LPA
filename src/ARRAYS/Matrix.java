@@ -110,7 +110,7 @@ public class Matrix {
 //            System.out.println();
 //        }
 
-
+//see the three loops
         //Multiplication of matrix
         int[][] a = {
                 {1, 2},
