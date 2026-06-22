@@ -82,7 +82,7 @@ public class Matrix {
 //                left++;
 //            }
 //        }
-
+//===============================================================
 //Addition of a  matrix
 //        int[][] a = {
 //                {1, 2, 3},
@@ -109,6 +109,8 @@ public class Matrix {
 //            }
 //            System.out.println();
 //        }
+
+//===============================================================
 
 //see the three loops
         //Multiplication of matrix
