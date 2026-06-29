@@ -59,7 +59,7 @@ public class onedarrayunderstanding {
 //        System.out.println();
 //
 //        //Accessing elements
-//        System.out.print("First element: " +arr[0]);//last element
+//        System.out.print("First element: " +arr[0]);//first element
 //        System.out.println();
 //        System.out.print("Last element: " +arr[arr.length-1]);//last element
 //
