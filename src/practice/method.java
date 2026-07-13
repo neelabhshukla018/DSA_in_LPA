@@ -22,6 +22,10 @@ public class method {
         System.out.print(sum);
     }
 
+    public static int multipleoftwo(int m,int n){
+        return m*n;
+    }
+
     public static void main(String[] args) {
         System.out.print("sum of two numbers is: " +sumoftwo(5,9));
         System.out.println();
@@ -30,5 +34,7 @@ public class method {
         table(2,10);
         System.out.println();
         printsum();
+        System.out.println();
+        System.out.print("multiple of two numbers is: " +multipleoftwo(5,9));
     }
 }
