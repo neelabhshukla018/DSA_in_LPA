@@ -14,7 +14,6 @@ public class allaboutstring {
 //        String city=userip.nextLine();
 
 
-
 ////        System.out.print("Your name is: " +name);
 //        System.out.println();
 //        System.out.print("length of the name is: " +name.length());
@@ -66,25 +65,54 @@ public class allaboutstring {
 //        System.out.println();
 //        System.out.print(name.replace('l','A'));
 
-        char arr[]=name.toCharArray();
-        for (char ch:arr) {
-            System.out.print(ch+" ");
+//        char arr[]=name.toCharArray();
+//        for (char ch:arr) {
+//            System.out.print(ch+" ");
+//        }
+//        System.out.println();
+//        char namesd[]={'n','e','e','l','a','b','h'};
+//        for(char names:namesd){
+//            System.out.print(names+" ");
+//        }
+//        System.out.println();
+//
+//
+//   char yourfullname[]={'a','r','j','u','n'};
+//        for(char aceesname:yourfullname){
+//            System.out.print(aceesname +" ");
+//        }
+
+
+        //vowels in a string
+
+        String s="thequickbrownfoxjumpsoverthelazydog";
+
+//        int vowel=0;
+//        for (int i = 0; i <s.length() ; i++) {
+//            char ch=s.charAt(i);
+////            System.out.print(ch+" ");
+//            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+//                vowel++;
+//            }
+//        }
+//        System.out.print(vowel);
+
+
+        //palindrone string
+
+        String rev="";
+
+        for (int i = name.length()-1; i >=0 ; i--) {
+            rev+=name.charAt(i);
         }
 
-        char namesd[]={'n','e','e','l','a','b','h'};
-        for(char names:namesd){
-            System.out.println(names+" ");
+        if(name.equalsIgnoreCase(rev)){
+            System.out.print("It is a Palindrone");
         }
 
-        //hii neelabh today my network is very slow se ypu soon
-
-
-//efbeufbuebufubbbbbbbbbbbbbbbbbbb
-        //fnrennnnnnnnnnn
-
-
-
-
+        else {
+            System.out.print("Not a Palindrone");
+        }
 
 
 
