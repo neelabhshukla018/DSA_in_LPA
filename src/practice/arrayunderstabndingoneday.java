@@ -1,5 +1,6 @@
 package practice;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class arrayunderstabndingoneday {
@@ -38,6 +39,11 @@ public class arrayunderstabndingoneday {
         System.out.println();
 
         System.out.print(a1[0]);
+        System.out.println();
+        //last element
+        System.out.print(a1[a1.length-1]);
+        System.out.println();
+
 
 
 
