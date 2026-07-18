@@ -25,5 +25,19 @@ public class twopointertechnique {
         nm.reverse();
         s=nm.toString();
         System.out.println(s);
+
+//        int i=0;
+//        int j=s.length()-1;
+//
+//        while(i<=j){
+//            char temp1=s.charAt(i);
+//            char temp2=s.charAt(j);
+//
+//            nm.setCharAt(i,temp2);
+//            nm.setCharAt(j,temp1);
+//            i++;
+//            j--;
+//        }
+//        System.out.print(nm);
     }
 }
