@@ -189,27 +189,55 @@ public class arrayunderstabndingoneday {
 
 
   //for linear search
-        int arr[]={10,20,30,40,50};
+//        int arr[]={10,20,30,40,50};
+//
+//        int key=30;
+//        int idx=-1;
+//
+//        for (int i = 0; i <arr.length ; i++) {
+//            if(arr[i]==key){
+//                idx=i;
+//                break;
+//            }
+//        }
+//        if(idx!=-1){
+//            System.out.print("Element found at index: " +idx);
+//        }
+//        else {
+//            System.out.print("Element did not found");
+//        }
 
-        int key=30;
+
+//binary search
+        int arr[]={10,20,30,40,50};
+        int key=40;
+        int low=0;
+        int high=arr.length-1;
         int idx=-1;
 
-        for (int i = 0; i <arr.length ; i++) {
-            if(arr[i]==key){
-                idx=i;
+        while(low<=high){
+            int mid=(low+high)/2;
+            if(arr[mid]==key){
+                idx=mid;
                 break;
             }
+
+            else if (key<arr[mid]) {
+                high=mid-1;
+            }
+
+            else {
+                low=mid+1;
+            }
         }
+
         if(idx!=-1){
             System.out.print("Element found at index: " +idx);
         }
+
         else {
             System.out.print("Element did not found");
         }
-
-
-
-
 
 
     }
