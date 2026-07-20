@@ -131,6 +131,64 @@ public class teodarrayunderstanding {
 //
 //            }
 
+      //addition of two matrices
+//        int a1[][]={{1,2,3},{4,5,6},{7,8,9}};
+//        int a2[][]={{10,11,12},{13,14,15},{16,17,18}};
+//
+//        int sum[][]=new int[a1.length][a1[0].length];
+//
+//        for(int i=0;i<a1.length;i++){
+//            for(int j=0;j<a1[i].length;j++){
+//                sum[i][j]=a1[i][j]+a2[i][j];
+//            }
+//        }
+//        for (int[] row : sum) {
+//            for (int x : row) {
+//                System.out.print(x + " ");
+//            }
+//            System.out.println();
+//        }
+
+        //Transpose of a matrices
+//        int a1[][]={{1,2,3},{4,5,6},{7,8,9}};
+//        int rows=a1.length;
+//        int cols=a1[0].length;
+//
+//        int transpose[][]=new int [cols][rows];
+//
+//        for(int i=0;i<rows;i++){
+//            for(int j=0;j<cols;j++){
+//                transpose[j][i]=a1[i][j];
+//            }
+//        }
+//
+//                for (int[] row : transpose) {
+//            for (int x : row) {
+//                System.out.print(x + " ");
+//            }
+//            System.out.println();
+//        }
+
+//        //multiplication of matrices
+//        int a1[][]={{1,2,3},{4,5,6},{7,8,9}};
+//        int a2[][]={{10,11,12},{13,14,15},{16,17,18}};
+//
+//        int [][] mul=new int[a1.length][a1[0].length];
+//
+//        for(int i=0;i<a1.length;i++){
+//            for (int j = 0; j <a2[0].length ; j++) {
+//                for (int k = 0; k <a1[0].length ; k++) {
+//                    mul[i][j]+=a1[i][k]*a2[k][j];
+//                }
+//            }
+//        }
+//
+//                        for (int[] row : mul) {
+//            for (int x : row) {
+//                System.out.print(x + " ");
+//            }
+//            System.out.println();
+//        }
 
 
 
