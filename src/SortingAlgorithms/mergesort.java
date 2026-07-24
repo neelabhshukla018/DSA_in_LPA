@@ -8,7 +8,8 @@ public class mergesort {
         int[] temp = new int[arr.length];
         mergeSort(arr, temp, 0, arr.length - 1);
     }
-
+// to check it it is merged or not
+    //understand
     private static void mergeSort(int[] arr, int[] temp, int left, int right) {
 
         // Base case
