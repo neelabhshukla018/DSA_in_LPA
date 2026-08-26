@@ -32,6 +32,8 @@ public class HowtotakeInput {
         System.out.println(work.isEmpty());//false
         System.out.println(work.isBlank());//true2
 
+        //do you remember the changes here
+
 
     }
 }
