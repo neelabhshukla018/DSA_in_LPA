@@ -33,6 +33,7 @@ public class HowtotakeInput {
         System.out.println(work.isBlank());//true2
 
         //do you remember the changes here
+        //do you remember the dsa
 
 
     }
